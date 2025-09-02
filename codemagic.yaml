@@ -1,8 +1,8 @@
-android-workflow:
+workflows:
+  android-workflow:
     name: Build Android APK
     max_build_duration: 60
     environment:
-      sdk: "flutter"
       flutter: stable
     scripts:
       - name: Get Flutter dependencies
@@ -10,4 +10,5 @@ android-workflow:
       - name: Build APK
         script: flutter build apk --release
     artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
       -      
